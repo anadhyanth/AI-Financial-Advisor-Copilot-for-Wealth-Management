@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  advisor-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: ai-advisor-api:latest
+    container_name: advisor-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - LLM_MODEL=${LLM_MODEL:-claude-sonnet-4-6}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./vectorstore:/app/vectorstore
+      - ./reports:/app/reports
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  advisor-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    image: ai-advisor-frontend:latest
+    container_name: advisor-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://advisor-api:8000
+    depends_on:
+      advisor-api:
+        condition: service_healthy
+    restart: unless-stopped

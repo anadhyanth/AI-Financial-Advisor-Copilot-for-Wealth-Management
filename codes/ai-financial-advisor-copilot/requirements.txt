@@ -1,0 +1,29 @@
+fastapi==0.111.1
+uvicorn[standard]==0.30.3
+pydantic==2.8.2
+pydantic-settings==2.3.4
+python-dotenv==1.0.1
+streamlit==1.37.0
+requests==2.32.3
+
+# LLM
+anthropic==0.34.0
+
+# RAG / embeddings / vector store
+sentence-transformers==3.0.1
+faiss-cpu==1.8.0.post1
+pypdf==4.3.1
+tiktoken==0.7.0
+
+# Portfolio analytics
+pandas==2.2.2
+numpy==1.26.4
+yfinance==0.2.41
+
+# Reporting
+reportlab==4.2.2
+matplotlib==3.9.1
+
+# Testing
+pytest==8.3.2
+httpx==0.27.0
