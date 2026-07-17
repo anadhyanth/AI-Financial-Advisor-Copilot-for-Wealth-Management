@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Distribution
+build/
+dist/
+*.egg-info/
+
+# Cache
+.cache/
+.pytest_cache/
+.pyre/
+.mypy_cache/
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+.env.*
+
+# Model Files
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Vector Databases
+vectorstore/
+faiss_index/
+chroma_db/
+chroma/
+
+# Data
+data/
+*.csv
+*.xlsx
+*.xls
+*.pdf
+
+# Outputs
+outputs/
+reports/
+generated_reports/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS Files
+.DS_Store
+Thumbs.db

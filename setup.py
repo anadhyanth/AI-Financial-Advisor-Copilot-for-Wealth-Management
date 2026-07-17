@@ -1,0 +1,31 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="AI-Financial-Advisor-Copilot",
+    version="1.0.0",
+    author="Anadhyanth",
+    description="AI-powered Financial Advisor Copilot using Large Language Models and Retrieval-Augmented Generation (RAG).",
+    packages=find_packages(),
+    install_requires=[
+        "fastapi",
+        "uvicorn",
+        "streamlit",
+        "langchain",
+        "langchain-community",
+        "sentence-transformers",
+        "faiss-cpu",
+        "chromadb",
+        "transformers",
+        "torch",
+        "accelerate",
+        "pandas",
+        "numpy",
+        "pydantic",
+        "python-dotenv",
+        "tqdm",
+        "scikit-learn",
+        "openai",
+        "huggingface_hub",
+    ],
+    python_requires=">=3.10",
+)
