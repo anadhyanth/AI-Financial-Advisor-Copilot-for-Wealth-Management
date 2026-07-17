@@ -6,7 +6,7 @@
 
 An AI-powered financial advisory copilot that leverages Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) to assist financial advisors with portfolio analysis, client reporting, document retrieval, and conversational investment insights. The system combines semantic search with generative AI to deliver personalized, context-aware financial recommendations.
 
-<img src="assets/AIcopilot.png.png" width="100%">
+<!-- <img src="assets/AIcopilot.png.png" width="100%"> -->
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge&logo=fastapi)
